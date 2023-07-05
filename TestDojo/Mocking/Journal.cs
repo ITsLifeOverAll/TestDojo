@@ -1,6 +1,4 @@
-﻿using System.IO.Abstractions;
-
-namespace TestDojo.Mocking
+﻿namespace TestDojo.Mocking
 {
     public class Journal
     {
