@@ -4,12 +4,6 @@ public class Numbers
 {
     public int Add(int a, int b) => a + b;
 
-    public async Task<int> AddAsync(int x, int y)
-    {
-        await Task.Delay(100); 
-        return 42;
-    }
-
     public int Max(int a, int b) => (a > b) ? a : b;
 
     public double Divide(double numerator, double denominator)
@@ -17,6 +11,14 @@ public class Numbers
         if (denominator == 0) throw new InvalidOperationException("denominator can't be zero!");
         return numerator / denominator;
     }
+    
+    public async Task<double> DivideAsync(double numerator, double denominator)
+    {
+        await Task.Delay(100);
+
+        if (denominator == 0) throw new InvalidOperationException("denominator can't be zero!");
+        return numerator / denominator;
+    }    
 
     public IEnumerable<int> GetEvenNumbers(int limit)
     {
